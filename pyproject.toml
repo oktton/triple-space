@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "triple-spaces"
+version = "0.1.0"
+description = ""
+authors = ["'Anonymous' <'<>'>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+priority = "primary"
+
+[tool.poetry.group.agent.dependencies]
+
+httpx = "^0.28.1"
+pynput = "^1.7.8"
+pystray = "^0.19.5"
+Pillow = "^9.4.0"
+
+# platform-specified
+pywin32 = { version = "^305", markers = "sys_platform == 'win32'" }
+pyobjc-framework-Quartz = { version = "^11.0", markers = "sys_platform == 'darwin'" }
+
+
+[tool.poetry.group.server.dependencies]
+
+openai = "^1.68.0"
+dotenv = "^0.9.9"
+uvicorn = "^0.34.0"
+fastapi = "^0.115.6"
+
+[tool.poetry.group.benchmark.dependencies]
+pandas = "^1.5.3"
+textstat = "^0.7.3"
+sentence-transformers = "^2.2.2"
+jiwer = "^2.3.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

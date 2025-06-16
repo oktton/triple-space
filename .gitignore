@@ -1,0 +1,6 @@
+server/.env
+**/__pycache__/
+*.log
+.vscode/
+**/cache
+**/logs
